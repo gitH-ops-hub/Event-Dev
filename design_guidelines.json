@@ -1,0 +1,79 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "concept": "Authority, Clarity, Truth. High-contrast, function-first design for seamless event registration and powerful dashboard management. Combines stark minimal layouts with aggressive typography.",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Satoshi",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-bold tracking-tight",
+      "body": "text-base font-medium leading-relaxed",
+      "small": "text-sm font-medium",
+      "overline": "text-xs font-bold tracking-[0.2em] uppercase text-zinc-500"
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F4F4F5",
+    "border": "#E4E4E7",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "primary": "#0055FF",
+    "primary_hover": "#0044CC",
+    "danger": "#FF2A00",
+    "success": "#00C853"
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy combined with structural grids.",
+    "container_padding": "p-8 md:p-12",
+    "grid_gap": "gap-8 lg:gap-12",
+    "dashboard_grid": "Tight (gap-4 or gap-6) with full height children. 'Control Room' protocol.",
+    "border_radius": "rounded-none or max rounded-sm (2px-4px) for sharp, technical look.",
+    "borders": "1px solid border-zinc-200, highly visible grid lines. Use border-collapse patterns."
+  },
+  "components": {
+    "buttons": "Sharp corners, high contrast. Primary: bg-primary text-white hover:bg-primary_hover. Secondary: bg-surface border border-border text-text_primary hover:bg-border.",
+    "cards": "Flat background, 1px subtle border, no shadow by default. Hover: slight shadow, border darkens.",
+    "inputs": "Shadcn based, sharp borders, focus ring in primary color. Not native. Minimal padding, strong borders.",
+    "navigation": "Solid background (white) with hard bottom border. Sticky top.",
+    "icons": "lucide-react"
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "page_load": "fade-in, staggered slide-up for lists",
+    "accessibility": "respect prefers-reduced-motion"
+  },
+  "media": [
+    {
+      "category": "hero_background",
+      "url": "https://images.unsplash.com/photo-1592049808936-c9e7ff16151b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHN3aXNzJTIwZ3JhcGhpYyUyMGRlc2lnbiUyMGJsYWNrJTIwd2hpdGV8ZW58MHx8fHwxNzc1NTE2MzY1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract black and white graphic design for event page backgrounds"
+    },
+    {
+      "category": "event_crowd",
+      "url": "https://images.unsplash.com/photo-1760367120107-2b734a515cdd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwY29uZmVyZW5jZSUyMGNyb3dkfGVufDB8fHx8MTc3NTUxNjM1M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Modern tech conference crowd for event listing thumbnails"
+    },
+    {
+      "category": "brand_logo",
+      "url": "https://images.unsplash.com/photo-1772423428101-6ab2811e0c2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZ2VvbWV0cmljJTIwbG9nbyUyMGJsYWNrJTIwd2hpdGV8ZW58MHx8fHwxNzc1NTE2MzY1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract minimalist geometric logo for placeholder branding"
+    }
+  ],
+  "accessibility": {
+    "contrast": "APCA compliant. Text > 18px minimum 3:1, Normal text 4.5:1",
+    "focus": "High contrast ring. focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+    "testing_attributes": "All interactive elements MUST have data-testid attributes (e.g. data-testid='login-submit-btn')"
+  },
+  "instructions_to_main_agent": [
+    "Use pure HTML/Tailwind for marketing/public event registration pages to achieve a Swiss Brutalist layout (asymmetrical grids, large typography).",
+    "Use Shadcn UI for the Admin Dashboard and complex registration forms, but aggressively customize them to remove 'Vercel-look'. Enforce sharp corners (rounded-none), high contrast borders, and flat surfaces.",
+    "Incorporate 'data-testid' attributes on all buttons, links, inputs, and functional UI components.",
+    "Implement ticket generation utilizing standard libraries (e.g., react-pdf, qrcode.react, react-barcode) to ensure BOTH Barcode & QR code are rendered simultaneously in the PDF.",
+    "Import Cabinet Grotesk (headings) and Satoshi (body) via @font-face or Google Fonts.",
+    "Do NOT use 'Inter' for headings. Never center-align all text; lean heavily on optical left-alignment and asymmetrical bento grids.",
+    "Do not use generic blue/purple gradients. Keep color usage strictly functional—Monochrome + pure #0055FF as the primary driver for interaction."
+  ]
+}
