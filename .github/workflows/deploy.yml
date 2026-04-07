@@ -1,3 +1,10 @@
+Go to Settings → Pages
+Under "Build and deployment" → Source
+Change from "Deploy from a branch" to "GitHub Actions"
+Save
+Fix 2: Update the Workflow File
+Replace the deploy.yml file with this fixed version (remove yarn.lock dependency):
+
 name: Deploy to GitHub Pages
 
 on:
@@ -25,13 +32,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'yarn'
-          cache-dependency-path: frontend/yarn.lock
           
       - name: Install dependencies
         run: |
           cd frontend
-          yarn install --frozen-lockfile
+          yarn install
           
       - name: Build
         run: |
