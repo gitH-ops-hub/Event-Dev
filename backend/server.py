@@ -747,7 +747,7 @@ app.include_router(api_router)
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://gith-ops-hub.github.io"],
+    allow_origins=["https://github.com/gitH-ops-hub/Event-Dev"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
